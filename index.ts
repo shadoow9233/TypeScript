@@ -48,7 +48,7 @@ function throwError(message: string): never {
     throw new Error(message);
 }
 
-// Unknown Type :  similar to any, but safer
+// Unknown Type : 
 let userInput: unknown = "Hello, TypeScript!";
 if (typeof userInput === "string") {
     let myString: string = userInput; // Type checking required
@@ -60,3 +60,41 @@ let myTuple: [number, string, boolean] = [42, "TypeScript", true];
 console.log("Tuple:", myTuple);
 
 
+// Array of numbers
+let numbers: number[] = [1, 2, 3, 4, 5];
+console.log("Numbers:", numbers);
+
+// Array of strings
+let fruits: string[] = ["Apple", "Banana", "Orange"];
+console.log("Fruits:", fruits);
+
+// Array of mixed types
+let mixedArray: (number | string)[] = [1, "Two", 3, "Four", 5];
+console.log("Mixed Array:", mixedArray);
+
+// Array iteration using for loop
+console.log("Iterating through numbers array:");
+for (let i = 0; i < numbers.length; i++) {
+    console.log(numbers[i]);
+}
+
+// Array iteration using for...of loop
+console.log("Iterating through fruits array:");
+for (const fruit of fruits) {
+    console.log(fruit);
+}
+
+// Array methods: push, pop, shift, unshift
+numbers.push(6);
+console.log("After pushing 6 to numbers:", numbers);
+
+let poppedValue = numbers.pop();
+console.log("After popping from numbers:", numbers);
+console.log("Popped value:", poppedValue);
+
+numbers.unshift(0);
+console.log("After unshifting 0 to numbers:", numbers);
+
+let shiftedValue = numbers.shift();
+console.log("After shifting from numbers:", numbers);
+console.log("Shifted value:", shiftedValue);
