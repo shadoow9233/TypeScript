@@ -26,3 +26,37 @@ function displayInfo(name: string, age: number, isStudent: boolean): void {
 // Call the function with sample values
 displayInfo("Shadoow", 25, false);
 
+
+// Any Type: allows variables to have any data type
+let dynamicValue: any = "This can be any type";
+console.log("Dynamic Value:", dynamicValue);
+
+// Void Type: return type of functions that do not return a value
+function logMessage(): void {
+    console.log("This function does not return a value");
+}
+logMessage();
+
+// Null and Undefined Types: use  to explicitly express the absence of a value
+let nullValue: null = null;
+let undefinedValue: undefined = undefined;
+console.log("Null Value:", nullValue);
+console.log("Undefined Value:", undefinedValue);
+
+// Never Type : represents values that never occur. 
+function throwError(message: string): never {
+    throw new Error(message);
+}
+
+// Unknown Type :  similar to any, but safer
+let userInput: unknown = "Hello, TypeScript!";
+if (typeof userInput === "string") {
+    let myString: string = userInput; // Type checking required
+    console.log("My String:", myString);
+}
+
+// Tuple Type
+let myTuple: [number, string, boolean] = [42, "TypeScript", true];
+console.log("Tuple:", myTuple);
+
+
