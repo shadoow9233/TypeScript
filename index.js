@@ -76,3 +76,6 @@ console.log("After unshifting 0 to numbers:", numbers);
 var shiftedValue = numbers.shift();
 console.log("After shifting from numbers:", numbers);
 console.log("Shifted value:", shiftedValue);
+// tuples in TS
+var myTuples = ["shadoow", 25];
+console.log(myTuples);

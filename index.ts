@@ -98,3 +98,10 @@ console.log("After unshifting 0 to numbers:", numbers);
 let shiftedValue = numbers.shift();
 console.log("After shifting from numbers:", numbers);
 console.log("Shifted value:", shiftedValue);
+
+
+// tuples in TS
+// Declare a tuple with two elements: a string and a number
+let myTuples: [string, number] = ["shadoow", 25];
+// Accessing elements in a tuple
+console.log(myTuples)
